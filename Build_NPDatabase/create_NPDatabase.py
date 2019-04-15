@@ -5,6 +5,8 @@ Structure identifiers and all attributes generated with rdkit are included.
 Usage: python3 create_NPDatabase.py [all_collected_structure_data] [path/to/NPDatabase.sqlite]
 Note: A new sqlite file is generated automatically
 
+Use RDkit version 2018.09.2
+
 Example:
 Command line: python3 create_NPDatabase.py all_structure_input.txt /mnt/nexenta/stokm006/NPDatabase.sqlite
 """
