@@ -15,7 +15,7 @@ compound name is added to it.
 Result a text file with unique source_ids (accession number + compound name) and the 
 isomeric/ canononical RDkit smiles.
 
-The 2019 version of RDkit is required
+Use RDkit version 2018.09.2
 
 The name of the input file (excluding ".txt") will be used as Database name,
 if this Database name is already in NPDatabas, copy that exact name.
