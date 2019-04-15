@@ -1,7 +1,7 @@
 # NPDatabase-NPRules
 
 
-Use Use RDkit version 2018.09.2
+Use Use RDkit version 2018.09.2  
 The command line to use are specified in the scripts
 
 ## Build NPDatabase
@@ -143,14 +143,14 @@ Download the rule sets and upload them into the modified_molBLOCKS directory. Go
 
 Parameters explained:
 Parameter	Description
--i	Input file with structures
--r	File with ruleset
--w	Maximum molecular weight
--n	Minimum number of atoms
--m	Maximum number of atoms
--s	Fragment size relative to the parent structure
--k	Number of fragments that should be connected and considered as new fragment
--o	Output file
+-i	    Input file with structures  
+-r	    File with ruleset  
+-w	    Maximum molecular weight  
+-n	    Minimum number of atoms  
+-m      Maximum number of atoms  
+-s	    Fragment size relative to the parent structure  
+-k	    Number of fragments that should be connected and considered as new fragment  
+-o	    Output file  
 
 
 
