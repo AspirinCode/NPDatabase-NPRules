@@ -2,7 +2,7 @@
 
 
 Use RDkit version 2018.09.2 (install with Conda: https://anaconda.org/rdkit/rdkit)  
-The command line to use is specified in each scripts
+The command line to use is specified in each script
 
 ## Build NPDatabase
 _all scripts in Build_NPDatabase directory_  
@@ -166,10 +166,10 @@ This script will calculate and output:
 
 __Quality results, select top 10__   
 Input: output_from_molBLOCKS.txt  
-Script: select_top_10.py  
+Script: select_top_10.py    
 This script will select the top 10 most occurring substructures found in de molBLOCKS output file. The results are written into a csv file and the substructures will be shown in a pop-up display. This scripts requires ImageMagick, see: https://anaconda.org/conda-forge/imagemagick.
 
 __Quality results, show substructures__   
 Input: output_from_molBLOCKS.txt  
-Script: Show_substructures.py  
+Script: Show_substructures.py    
 This script is shows the generated substructures in a pop-up display, this script also requires ImageMagick. If you choose ‘y’ as method to show the substructure, keep in mind that the substructure shown is not necessarily has the correct coordinates, it is just a substructure match. 
