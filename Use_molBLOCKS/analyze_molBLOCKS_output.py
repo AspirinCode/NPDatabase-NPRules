@@ -4,7 +4,9 @@
 Created on Mon Oct 22 09:52:34 2018
 
 Script that processes molBLOCKS output, calculates and prints several
-substructure results..
+substructure results.
+
+Use RDkit version 2018.09.2
 
 Usage:
 Command line: python3 analyze_molBLOCKS_output.py [output_file_molBLOCKS]
