@@ -2,7 +2,7 @@
 
 
 Use RDkit version 2018.09.2 (install with Conda: https://anaconda.org/rdkit/rdkit)  
-The command line to use are specified in the scripts
+The command line to use is specified in each scripts
 
 ## Build NPDatabase
 _all scripts in Build_NPDatabase directory_  
@@ -143,16 +143,15 @@ Download the rulesets and upload them into the modified_molBLOCKS directory. Go 
 
 ../fragment -r ../NPRules.txt -i input_structure_file.txt -n 2 -m 100 -k 1 -w 1000 -s 0.99 -o output_structure_file.txt
 
-Parameters explained:
-Parameter	Description
--i	    Input file with structures  
--r	    File with ruleset  
--w	    Maximum molecular weight  
--n	    Minimum number of atoms  
--m      Maximum number of atoms  
--s	    Fragment size relative to the parent structure  
--k	    Number of fragments that should be connected and considered as new fragment  
--o	    Output file  
+Parameters description  
+-i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input file with structures  
+-r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File with ruleset  
+-w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum molecular weight  
+-n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimum number of atoms  
+-m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum number of atoms  
+-s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fragment size relative to the parent structure  
+-k&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of fragments that should be connected and considered as new fragment  
+-o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output file  
 
 __Quantity results__  
 Input: output_from_molBLOCKS.txt
