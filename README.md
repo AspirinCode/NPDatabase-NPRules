@@ -59,9 +59,9 @@ The output from step 1, then can be used to check whether the structure is alrea
 __Step 3:__  
 Input: csv file with source id’s and SMILES
 
-Create molconvert inchi keys. First, install the molconvert pipeline according to  https://github.com/NP-Plug-and-Play-Scripts/inchiKeyCreatorPipeline
-Command to use the pipeline:
-python3 [path/to/workplace/InchiKeyCreatorPipeline.py] [path/to/workplace/JChem/jchemsuite/bin/] [/path/to/workplace/input_SMILES_files] [inchi_key_input.csv]
+Create molconvert inchi keys. First, install the molconvert pipeline, created by Rutger Ozinga: https://github.com/NP-Plug-and-Play-Scripts/inchiKeyCreatorPipeline. You can find the instructions to install the pipeline in InchiKey pipeline manual.pdf.  
+Command to use the pipeline:  
+python3 [path/to/workplace/InchiKeyCreatorPipeline.py] [path/to/workplace/JChem/jchemsuite/bin/] [/path/to/workplace/input_SMILES_files] [inchi_key_input.csv]  
 This command line contains the path to the script to run the pipeline, the path to molconvert program, the path to the folder that contains the files with the input SMILES and the name of the input file.
 
 __Step 4:__  
@@ -81,16 +81,16 @@ inchi, inchi_key_rdkit, inchi_key_molconvert
 __Step 6:__  
 Input: temporary NPDatabase file
 
-Classify the structures in the temporary structure table (in temporary NPDatabase) with the Classyfire pipeline. First install the Classifire pipeline: https://github.com/OscarHoekstra/ClassifyNPDB.
+Classify the structures in the temporary structure table (in temporary NPDatabase) with the Classyfire pipeline, created by Oscar Hoekstra. First install the Classifire pipeline: https://github.com/OscarHoekstra/ClassifyNPDB.  
 
-In the config file, adjust (also add a  “, “ at the end of line 83):
--	Workbase
--	Path to temporary NPDatabase 
+In the config file, adjust (also add a  “, “ at the end of line 83):  
+-	Workbase  
+-	Path to temporary NPDatabase   
 
-Then, in ClassifyNPDB directory, use the command line:
-python3 ClassifyNPDB.py
+Then, in ClassifyNPDB directory, use the command line:  
+python3 ClassifyNPDB.py  
 
-The temporary structure table is now fully classified and also contains attributes:  
+The temporary structure table is now fully classified and also contains attributes:   
 cf_direct_parent, cf_kingdom, cf_superclass, cf_class, cf_subclass, cf_intermediate_0, cf_intermediate_1, cf_intermediate_2, cf_intermediate_3, cf_intermediate_4, cf_intermediate_5, cf_molecular_framework,  cf_alternative_parents, cf_substituents, cf_description
 
 __Step 7:__  
