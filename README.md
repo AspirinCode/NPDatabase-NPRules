@@ -4,6 +4,9 @@
 Use RDkit version 2018.09.2 (install with Conda: https://anaconda.org/rdkit/rdkit)  
 The command line to use is specified in each script
 
+You can download the latest version of NPDatabase (the sqlite file) here: https://www.dropbox.com/s/hk5dnjq262zlks3/NPDatabase_05-4.sqlite?dl=0   
+
+
 ## Build NPDatabase
 _all scripts in Build_NPDatabase directory_  
 
