@@ -8,8 +8,9 @@ writes the results into a csv file and shows the substructures in a
 pop-up display
 
 This scripts requires ImageMagick, see: https://anaconda.org/conda-forge/imagemagick
+Use RDkit version 2018.09.2
 
-Uasge:
+Usage:
 Command line: python3 select_top_10.py [output_file_molBLOCKS]
 
 @author: stokm006
@@ -72,8 +73,7 @@ def select_top10(molblocks_results, output_name):
     
     # Sort list to get the top 10 ASC
     sorted_hit_list2 = sorted(hit_list2, key=lambda x: int(x[1]), reverse=True)
-    
-    
+   
     
     # Writes data top 10 into a csv file and creates draw mol list
     mol_draw_list = []
