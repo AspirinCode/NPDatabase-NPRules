@@ -154,22 +154,22 @@ Parameters description
 -o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output file  
 
 __Quantity results__  
-Input: output_from_molBLOCKS.txt
-Use script: analyze_molBLOCKS_output.py
+Input: output_from_molBLOCKS.txt  
+Script: analyze_molBLOCKS_output.py   
 
-This script will calculate and output:
+This script will calculate and output:  
 -	Number of generated substructures per input structure
 -	Total number of input structures
 -	Total number of substructures
 -	Total number of unique substructures
 -	Percentage of fragmented input structures
 
-__Quality results, select top 10__ 
-Input: output_from_molBLOCKS.txt
-Use script: select_top_10.py
+__Quality results, select top 10__   
+Input: output_from_molBLOCKS.txt  
+Script: select_top_10.py  
 This script will select the top 10 most occurring substructures found in de molBLOCKS output file. The results are written into a csv file and the substructures will be shown in a pop-up display. This scripts requires ImageMagick, see: https://anaconda.org/conda-forge/imagemagick.
 
-__Quality results, show substructures__ 
-Input: output_from_molBLOCKS.txt
-Use script: Show_substructures.py
+__Quality results, show substructures__   
+Input: output_from_molBLOCKS.txt  
+Script: Show_substructures.py  
 This script is shows the generated substructures in a pop-up display, this script also requires ImageMagick. If you choose ‘y’ as method to show the substructure, keep in mind that the substructure shown is not necessarily has the correct coordinates, it is just a substructure match. 
