@@ -7,8 +7,7 @@ the structure is added to the output file. The external_source_id's and
 isomeric smiles (csv) are written into the file which can be used as input
 for molconvert to create inchi keys, see https://github.com/NP-Plug-and-Play-Scripts/inchiKeyCreatorPipeline
     
-
-Use the latest RDkit version (2019)
+Use RDkit version 2018.09.2
 
 Usage:
 Command line: python3 create_molconvert_input.py [parsed new input file] [path/to/NPDatabasefile.sqlite]
