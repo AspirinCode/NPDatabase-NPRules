@@ -1,11 +1,11 @@
 # NPDatabase-NPRules
 
 
-Use RDkit version 2018.09.2 (install with Conda: https://anaconda.org/rdkit/rdkit)
+Use RDkit version 2018.09.2 (install with Conda: https://anaconda.org/rdkit/rdkit)  
 The command line to use are specified in the scripts
 
 ## Build NPDatabase
-_ _all scripts in Build_NPDatabase directory_ _  
+_all scripts in Build_NPDatabase directory_  
 
 Note: These scripts were used in order to create NPDatabase. If you want to rebuild NPDatabase, the structure_id’s will change.
 
@@ -16,8 +16,7 @@ Scripts:
 
 __Step 1:__  
 Input: structure data in CLASS format
-Script: collect_all_structures.py
-
+Script: collect_all_structures.py  
 First, all structure data from the different external databases is stored in a file containing the external_source_id and the SMILES. This step has to be repeated for each input file, then all structure data will be collected into one concatenated file.
 
 __Step 2:__   
@@ -37,7 +36,7 @@ Now NPDatabase can be classified with the ClassyFire Pipeline, see https://githu
 
 
 ## Add new structure data to NPDatabase
-_ _All scripts in Add_new_structure directory_ _  
+_All scripts in Add_new_structure directory_  
 
 Scripts:
 -	Parse_new_input.py
@@ -104,7 +103,7 @@ The data for the temporary structure table will be added to NPDatabase. The stru
 
 
 ## Generate and analyse substructures
-_ _All scripts in Use_molBLOCKS directory_ _  
+_All scripts in Use_molBLOCKS directory_  
 
 __Install molBLOCKS__  
 
