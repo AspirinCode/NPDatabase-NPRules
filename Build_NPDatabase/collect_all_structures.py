@@ -9,6 +9,7 @@ database name.
 This script has to be used for each database file you want to add, in order
 to create one large datafile with all database data from several databases.
 
+Use RDkit version 2018.09.2
 
 Usage:
 Command line: python3 collect_all_structures.py [input_external_database] [name_outputfile]
