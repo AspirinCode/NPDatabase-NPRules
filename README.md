@@ -1,10 +1,10 @@
-## NPDatabase-NPRules
+# NPDatabase-NPRules
 
 
 Use Use RDkit version 2018.09.2
 The command line to use are specified in the scripts
 
-#Build NPDatabase
+## Build NPDatabase
 
 Note: These scripts were used in order to create NPDatabase. If you want to rebuild NPDatabase, the structure_id’s will change.
 
@@ -35,7 +35,7 @@ After you have generated the mol convert inchi keys, see  https://github.com/NP-
 Now NPDatabase can be classified with the ClassyFire Pipeline, see https://github.com/OscarHoekstra/ClassifyNPDB and step 6 in add new structure data.
 
 
-#Add new structure data to NPDatabase
+## Add new structure data to NPDatabase
 
 Scripts:
 -	Parse_new_input.py
@@ -77,7 +77,6 @@ Create a temporary structure table with all structure data from RDkit and the mo
 Attributes: structure_id, isomeric_smiles, canonical_smiles, monoisotopic_mass, molecular_formula, 
 inchi, inchi_key_rdkit, inchi_key_molconvert
 
-
 Step 6:
 Input: temporary NPDatabase file
 
@@ -102,7 +101,7 @@ Script to use: Update_NPDatabase.py
 The data for the temporary structure table will be added to NPDatabase. The structure_has_data_source and data_source table will be updated accordingly
 
 
-#Generate and analyze substructures
+## Generate and analyze substructures
 
 Install molBLOCKS
 
@@ -121,7 +120,6 @@ INCLUDES := -Iboost -I/usr/include/openbabel-2.0
 LIBS=-L/usr/local/lib -lm -lopenbabel
 
 Close and save the changes and then type and enter ‘make’. The installation should be finished now.
-
 
 Prepare input data
 Use script: Create_molBLOCKS_input.py
