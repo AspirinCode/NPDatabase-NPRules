@@ -1,0 +1,2 @@
+[NH1,NH0]-[CH0$(C=!@O)] amide=O
+[NH0]=[CH0$(C-O)]       amide-OH
