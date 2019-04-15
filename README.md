@@ -64,14 +64,18 @@ Input: csv file with source id’s and SMILES
 
 Create molconvert inchi keys. First, install the molconvert pipeline, created by Rutger Ozinga: https://github.com/NP-Plug-and-Play-Scripts/inchiKeyCreatorPipeline. You can find the instructions to install the pipeline in InchiKey pipeline manual.pdf.  
 Command to use the pipeline:  
+```
 python3 [path/to/workplace/InchiKeyCreatorPipeline.py] [path/to/workplace/JChem/jchemsuite/bin/] [/path/to/workplace/input_SMILES_files] [inchi_key_input.csv]  
+```
 This command line contains the path to the script to run the pipeline, the path to molconvert program, the path to the folder that contains the files with the input SMILES and the name of the input file.
 
 __Step 4:__  
 Input: all output files with molconvert inchi keys 
 
 The pipeline outputs the inchi keys in separated files, the files that contain the inchi key data end with ‘_part_XX_dataFile.txt’ . To concatenate these files into one file use the cat command:
+```
 Cat [file1.txt] [file2.txt] [file3.txt] > [all_output_collected.txt]
+```
 
 __Step 5:__  
 Input: Parsed new structure data
@@ -91,8 +95,9 @@ In the config file, adjust (also add a  “, “ at the end of line 83):
 -	Path to temporary NPDatabase   
 
 Then, in ClassifyNPDB directory, use the command line:  
+```
 python3 ClassifyNPDB.py  
-
+```
 The temporary structure table is now fully classified and also contains attributes:   
 cf_direct_parent, cf_kingdom, cf_superclass, cf_class, cf_subclass, cf_intermediate_0, cf_intermediate_1, cf_intermediate_2, cf_intermediate_3, cf_intermediate_4, cf_intermediate_5, cf_molecular_framework,  cf_alternative_parents, cf_substituents, cf_description
 
@@ -143,15 +148,15 @@ Rulesets:
 -	OHRules.txt
 
 Download the rulesets and upload them into the modified_molBLOCKS directory. Go into the directory where you stored the output file from create_molBLOCKS_input.py. From here you can use the command line:	
-
+```
 ../fragment -r ../NPRules.txt -i input_structure_file.txt -n 2 -m 100 -k 1 -w 1000 -s 0.99 -o output_structure_file.txt
-
+```
 Parameters description  
 -i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input file with structures  
 -r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File with ruleset  
--w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum molecular weight  
+-w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum molecular weight  
 -n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimum number of atoms  
--m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum number of atoms  
+-m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum number of atoms  
 -s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fragment size relative to the parent structure  
 -k&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of fragments that should be connected and considered as new fragment  
 -o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output file  
