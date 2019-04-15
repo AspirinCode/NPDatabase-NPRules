@@ -10,8 +10,8 @@ script.
 
 Usage:
 Command line: python3 create_molblocks_input.py [taxonomy] [taxonomy_name]
-taxonomy = superclass, class or subclass
-taxonomy_name = the exact name of superclass, class or subclass, including
+taxonomy: superclass, class or subclass
+taxonomy_name: the exact name of superclass, class or subclass, including
 capitals and punctuation marks.
 Example:
 Command line: python3 create_molblocks_input.py class Polypeptides
@@ -68,7 +68,7 @@ def store_structures(taxonomy, taxonomy_name, NPDatabase_path):
         
 if __name__ == '__main__':
    
-   NPDatabase_path = "/mnt/nexenta/stokm006/NPDatabase_22-3.sqlite"
+   NPDatabase_path = "/path/to/NPDatabase.sqlite"
    argv = sys.argv[1:]
    taxonomy = argv[0]
    taxonomy_name = argv[1]
