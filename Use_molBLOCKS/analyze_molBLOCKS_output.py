@@ -54,8 +54,11 @@ def calculate_structure_results(molblocks_results):
         nr_of_input_structures += 1
         subs_per_structure_list += [subs]
         for sub in subs:
-            mol = Chem.MolFromSmiles(sub)
-            rdkit_smiles_list += [Chem.MolToSmiles(mol)]  # RDKit canonical SMILES for consistency
+            if sub == '<NA>':
+                rdkit_smiles_list += [sub]
+            if sub != '<NA>':
+                mol = Chem.MolFromSmiles(sub)
+                rdkit_smiles_list += [Chem.MolToSmiles(mol)]  # RDKit canonical SMILES for consistency
 
     print ('\n          ~~~~~TOTAL~~~~~')
     print ('Total nr. of input structures      ', nr_of_input_structures)
