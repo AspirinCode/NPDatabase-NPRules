@@ -2,17 +2,13 @@
 # -*- coding: utf-8 -*-
 """
 Created on 29-03-19
-
 Script that selects the top 10 most occurring substructures (molBLOCKS output),
 writes the results into a csv file and shows the substructures in a 
 pop-up display
-
 This scripts requires ImageMagick, see: https://anaconda.org/conda-forge/imagemagick
 Use RDkit version 2018.09.2
-
 Usage:
 Command line: python3 select_top_10.py [output_file_molBLOCKS]
-
 @author: stokm006
 """
 
@@ -40,7 +36,7 @@ def select_top10(molblocks_results, output_name):
     """
         
     substructure_results = molblocks_results.split('\n')
-    smiles_list = []
+    rdkit_smiles_list = []
   
     # Parse data and generate rdkit canonical smiles 
     for subs in substructure_results[0:-1]:
@@ -54,14 +50,14 @@ def select_top10(molblocks_results, output_name):
             if sub != '<NA>':
                 mol = Chem.MolFromSmiles(sub)
                 rdkit_smiles_list += [Chem.MolToSmiles(mol)]
-    total_nr_of_subs = len(smiles_list)
+    total_nr_of_subs = len(rdkit_smiles_list)
     
     # Determine the total number of each unique substructure
     hit_list = []
     top_dict = {}
     unique_sub_list = []
     for smiles in rdkit_smiles_list:
-        count_smiles = smiles_list.count(smiles)
+        count_smiles = rdkit_smiles_list.count(smiles)
         percentage = count_smiles/total_nr_of_subs*100
         percentage = round(percentage, 4)
         if smiles not in hit_list:
@@ -80,7 +76,7 @@ def select_top10(molblocks_results, output_name):
     with open(output_name, 'w') as db_file:
         db_file.write('Nr,SubstructureSMILES,Total,Percentage\n')
         for i, hit in enumerate(sorted_hit_list2[0:10]):
-             sub_smiles = hit[0]
+            sub_smiles = hit[0]
             mol_draw_list += [Chem.MolFromSmiles(sub_smiles)]
             count = hit[1]
             percentage = hit[2]
@@ -103,6 +99,5 @@ if __name__ == "__main__":
     output_name = output_name + "_top_hits.csv"
     
     with open(argv[1]) as file_object:
-        result_substructures = file_object.read()
+        molblocks_results = file_object.read()
         select_top10(molblocks_results, output_name)
-
