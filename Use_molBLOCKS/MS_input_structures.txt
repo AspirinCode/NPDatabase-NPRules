@@ -1,0 +1,26 @@
+COc1ccc2c(c1OC)C(=O)OC2C1c2c(cc3c(c2OC)OCO3)CCN1C	Noscapine
+C=C(C)C1NC(=O)C(NC)C(O)c2cc(Cl)c(O)c(c2)OC(C)(CC)C(C(=O)N2CC=CC2C(=O)NC(C(=O)NC(=CC(=O)O)C(=O)O)=C(C)CC)NC1=O	Phomopsin A
+CC(C)CCCC(C)C1CCC2C3CC=C4CC(O)CCC4(C)C3CCC12C	Cholesterol_d6
+CCCc1nn(C)c2c(=O)nc(-c3cc(S(=O)(=O)N4CCN(C)CC4)ccc3OCC)[nH]c12	Sildenfal
+O=C(CCC(=O)C(=O)O)Nc1ccc(Cl)c(Cl)c1	DCAX
+CC(=O)Nc1ccc(O)c(SCC(N)C(=O)N2CCCC2C(=O)NC(Cc2ccccc2)C(=O)O)c1	NAPQI
+O=C(NCCCCNC(=O)C(CCCCNC(=O)c1cccc(O)c1O)NC(=O)c1cccc(O)c1O)c1cccc(O)c1O	Protochelin_a
+C#CCCCC1OC(=O)CNC(=O)C(C(C)CC)NC(=O)C(C(C)C)OC(=O)C(C(C)C)NC(=O)C1(C)C	Yuvalamide
+O=C(CCCN1CCC(O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1	Haloperidol
+CN(C)c1cccc2c(S(=O)(=O)N=[N+]=N)cccc12	Azide_derivate
+CC(=O)OC1C(=O)C2(C)C(O)CC3OCC3(OC(C)=O)C2C(OC(=O)c2ccccc2)C2(O)CC(OC(=O)C(O)C(NC(=O)c3ccccc3)c3ccccc3)C(C)=C1C2(C)C	Paclitaxel
+COC1C(OC(N)=O)C(O)C(Oc2ccc3c(O)c(NC(=O)c4ccc(O)c(CC=C(C)C)c4)c(=O)oc3c2C)OC1(C)C	Novobiocin
+CCCCCC1CC=CC(=O)O1	Massoia_lactone
+CC(F)CCCn1cc(C(=O)c2cccc3ccccc23)c2ccccc21	Cannabinoids_ AM-2201
+CC(C)(COP(=O)(O)OP(=O)(O)OCC1OC(n2cnc3c(N)ncnc32)C(O)C1OP(=O)(O)O)C(O)C(=O)NCCC(=O)NCCSC(=O)Cc1ccccc1	PA-CoA
+O=C(O)CNC(=O)Cc1ccccc1	PA-gly
+COc1cccc2c1C(=O)c1cc3c(cc1C2=O)C(O)C(O)(C(=O)CO)CC3OC1CC(N2CCOC(OC)C2)C(O)C(C)O1	MMDX
+CC(C)Cc1ccc(C(C)C(=O)NC(CSCC(N)=O)C(=O)NCC(=O)O)cc1	Ibuprofen_metabolite
+CCCCCC=CCC=CC=CC=CC(SCC(N=C(O)CCC(N)C(=O)O)C(O)=NCC(=O)O)C(O)CCCC(=O)O	Leukotriene_C4
+CCCCCCCCCCCCCC=CC(O)C(COC1OC(CO)C(OC2OC(CO)C(OC3OC(CO)C(O)C(OC4OC(CO)C(O)C(O)C4NC(C)=O)C3O)C(O)C2O)C(O)C1O)NC(=O)CCCCCCCCCCCCCCC	Glycosphingolipid_Gb4
+CC(=O)NC1C2OCC(O2)C(O)C1OC(C)C(=O)NC(C)C(=O)NC(CCC(=O)NC(CCCC(N)C(=O)O)C(=O)O)C(=O)O	Shigella_anhydro_MTP
+CC(=O)NC1C(O)OC(CO)C(O)C1OC(C)C(=O)NC(C)C(=O)NC(CCC(=O)O)C(N)=O	NOD2_ligands_MDP
+NC(CCC(=O)NC(CSC(=O)Cc1ccccc1Nc1c(Cl)cccc1Cl)C(=O)NCC(=O)O)C(=O)O	Diclofenac_metabolite
+CC1(C)CNc2cc(NC(=O)c3cccnc3NCc3ccncc3)ccc21	Motesanib
+CC(=O)Nc1ccc(OC2OC(C(=O)O)C(O)C(O)C2O)cc1	Acetaminophen_glucuronide
+C=C1C(=O)NC(C)C(=O)NC(CC(C)C)C(=O)NC(C(=O)O)C(C)C(=O)NC(CCCN=C(N)N)C(=O)NC(C=CC(C)=CC(C)C(Cc2ccccc2)OC)C(C)C(=O)NC(C(=O)O)CCC(=O)N1C	Microcystin-LR
