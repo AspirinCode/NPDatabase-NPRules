@@ -9,12 +9,16 @@ be used as molBLOCKS input. NPDatabase_path should be specified in this
 script.
 
 Usage:
-Command line: python3 create_molblocks_input.py [taxonomy] [taxonomy_name]
-taxonomy: superclass, class or subclass
-taxonomy_name: the exact name of superclass, class or subclass, including
-capitals and punctuation marks.
+Command line: python3 create_molblocks_input.py [taxonomy] ["taxonomy_name"]
+taxonomy = superclass, class or subclass
+taxonomy_name = the exact name of superclass, class or subclass, including
+capitals and punctuation marks. IMPORTANT: use quotation marks!
+
 Example:
-Command line: python3 create_molblocks_input.py class Polypeptides
+Command line: python3 create_molblocks_input.py class "Polypeptides"
+
+Output: input file for molBLOCKS with structure SMILES and structure id's
+
 @author: stokm006
 """
 
@@ -56,8 +60,10 @@ def store_structures(taxonomy, taxonomy_name, NPDatabase_path):
             canonical_smiles_list += [row[2]]
     
     
+    
     # Write structures into a txt file
     output_file_name = taxonomy+  '_' + taxonomy_name + '_' + 'molBLOCKS_input.txt'
+    output_file_name = output_file_name.replace(' ', '_')
     with open(output_file_name, 'w') as db_file:
         for i in range(len(canonical_smiles_list)):
             db_file.write(canonical_smiles_list[i] + '\t' + structure_id_list[i] + '\n')
