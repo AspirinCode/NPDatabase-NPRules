@@ -111,7 +111,7 @@ Close and save the changes and then type and enter ‘make’. The installation 
 __Prepare input data__  
 Input: NPDatabase SQLite file
 Script: create_molBLOCKS_input.py
-Output: text file with SMILES and structure id's 
+Output: text file with structure SMILES and structure id's 
 
 First, you have to create input suitable for molBLOCKS. This script extracts structures from NPDatabase based on the taxonomy type (superclass/ class/ subclass) and name. The stucture_id and SMILES are written into a file suitable for molBLOCKS. The NPDatabase path should be specified in the script.
 
@@ -125,9 +125,9 @@ Output: text file with substructure SMILES and structure id's
 Rulesets: 
 -	NPRules.txt
 -	AmideRules.txt
--	LPRules.txt
--	BNRules.txt
--	OHRules.txt
+-	NPLPRules.txt
+-	NPBNRules.txt
+-	NPOHRules.txt
 
 Download the rulesets and upload them into the modified_molBLOCKS directory. Go into the directory where you stored the output file from create_molBLOCKS_input.py. From here you can use the command line:	
 ```
@@ -155,14 +155,33 @@ This script will calculate and output:
 -	Percentage of fragmented input structures
 
 __Quality results, select top 10__   
-Input: output_from_molBLOCKS.txt  
+Input: text file with substructure SMILES and structure id's (ouput from molBLOCKS) 
 Script: select_top_10.py   
 Output: csv file with top 10 results
 
 This script will select the top 10 most occurring substructures found in de molBLOCKS output file. The results are written into a csv file and the substructures will be shown in a pop-up display. This scripts requires ImageMagick, see: https://anaconda.org/conda-forge/imagemagick.
 
 __Quality results, show substructures__   
-Input: output_from_molBLOCKS.txt  
+Input: text file with substructure SMILES and structure id's (ouput from molBLOCKS) 
 Script: Show_substructures.py  
 
 This script is shows the generated substructures in a pop-up display, this script also requires ImageMagick. If you choose ‘y’ as method to show the substructure, keep in mind that the substructure shown is not necessarily has the correct position relative to the structure, it is just a substructure match. 
+
+## Add substructures to substructure table in NPDatabase
+_All scripts in Add_substructures directory_  
+
+Input: NPDatabase SQLite file  
+Input: text file with structure SMILES and structure id's  (input for molBLOCKS)
+Input: text file with substructure SMILES and structure id's (ouput from molBLOCKS) 
+Script: create_substruture.py and/ or add_substructure.py
+Ouput: NPDatabase SQLite file with new substructures in substructure table and updated structure_has_substructure table.
+
+If the substructure and structure_has_substructure table do not exist yet (in NPDatabase it already exists!) then you first have to use create_substructure.py. This script creates both tables and generates the data for the given substructure data.   
+
+If the substructure and structure_has_substructure table already exist, then use add_substructure.py. This script checks whether the substructures are already present in NPDatabase, if not, then the new substructures are added. Also the structure_has_substructure table will be updated which contains the structure-substructures pair. 
+
+
+In NPDatabase, already the substructures of all structures are added, but if you want to add new substructures and update the structure_has_substructure table.
+
+
+
