@@ -16,23 +16,17 @@ https://github.com/SamStokman/NPDatabase-NPRules/tree/master/Build_NPDatabase
 ## Add new structure data to NPDatabase
 _All scripts in Add_new_structure directory_  
 
-Scripts:
--	Parse_new_input.py
--	Create_molconvert_input.py
--	Create_temp_structure_table.py
--	Update_NPDatabase.py
-
 __Step 1:__  
 Input: New structure data  
-Script: parse_new_input.py
-Output: text file with external_source_id and the isomeric/ canoninal SMILES
+Script: parse_new_input.py  
+Output: text file with external_source_id and the isomeric/ canoninal SMILES  
 
 Since each database with structure data uses different formats to store its data, first the data must be parsed. The minimal input requirements are the structures SMILES, the external source identifier and the name of the database where the new structure data comes from. The script, parse_new_input.py, can be used which has to be customized according to the input. The output of this script contains the external_source_id and the isomeric/ canoninal SMILES generated with RDKit.
 
 __Step 2:__  
 Input: text file with external_source_id and the isomeric/ canoninal SMILES  
-Script: create_molconvert_input.py
-Output: csv file with external source id and SMILES
+Script: create_molconvert_input.py  
+Output: csv file with external source id and SMILES  
 
 The output from step 1, then can be used to check whether the structure is already present in NPDatabase. Structures which are not yet present in NPDatabase will be written into a csv file suitable for the molconvert pipeline.
 
@@ -48,8 +42,8 @@ python3 [path/to/workplace/InchiKeyCreatorPipeline.py] [path/to/workplace/JChem/
 This command line contains the path to the script to run the pipeline, the path to molconvert program, the path to the folder that contains the files with the input SMILES and the name of the input file.
 
 __Step 4:__  
-Input: several text files with external source id's, SMILES and inchi keys 
-Output: text file with external source id's, SMILES and inchi keys 
+Input: several text files with external source id's, SMILES and inchi keys  
+Output: text file with external source id's, SMILES and inchi keys  
 
 The pipeline outputs the inchi keys in separated files, the files that contain the inchi key data end with ‘_part_XX_dataFile.txt’ . To concatenate these files into one file use the cat command:
 ```
@@ -58,15 +52,17 @@ cat [file1.txt] [file2.txt] [file3.txt] > [all_output_collected.txt]
 
 __Step 5:__  
 Input: text file with external_source_id and the isomeric/ canoninal SMILES (from step 1)  
-Input: text file with external source id's, SMILES and inchi keys 
-Script: create_temp_structure_table.py
-Output: SQLite file with temp structure table
+Input: text file with external source id's, SMILES and inchi keys  
+Script: create_temp_structure_table.py  
+Output: SQLite file with temp structure table  
+
 Create a temporary structure table with all structure data from RDkit and the molconvert inchi keys. 
 Attributes: structure_id, isomeric_smiles, canonical_smiles, monoisotopic_mass, molecular_formula, 
 inchi, inchi_key_rdkit, inchi_key_molconvert
 
 __Step 6:__  
-Input: SQLite file with temp structure table
+Input: SQLite file with temp structure table  
+Output: SQLite file with temp structure table with classified structures  
 
 Classify the structures in the temporary structure table (in temporary NPDatabase) with the Classyfire pipeline, created by Oscar Hoekstra. First install the Classifire pipeline: https://github.com/OscarHoekstra/ClassifyNPDB.  
 
@@ -82,10 +78,10 @@ The temporary structure table is now fully classified and also contains attribut
 cf_direct_parent, cf_kingdom, cf_superclass, cf_class, cf_subclass, cf_intermediate_0, cf_intermediate_1, cf_intermediate_2, cf_intermediate_3, cf_intermediate_4, cf_intermediate_5, cf_molecular_framework,  cf_alternative_parents, cf_substituents, cf_description
 
 __Step 7:__  
-Input: text file with external_source_id and the isomeric/ canoninal SMILES (from step 1) 
-Input: SQLite file with temp structure table
-Input: NPDatabase SQLite file
-Output: Updated NPDatabase SQLite file
+Input: text file with external_source_id and the isomeric/ canoninal SMILES (from step 1)   
+Input: SQLite file with temp structure table  
+Input: NPDatabase SQLite file  
+Output: Updated NPDatabase SQLite file  
 
 Script to use: Update_NPDatabase.py
 The data for the temporary structure table will be added to NPDatabase. The structure_has_data_source and data_source table will be updated accordingly
