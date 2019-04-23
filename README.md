@@ -31,8 +31,8 @@ Output: csv file with external source id and SMILES
 The output from step 1, then can be used to check whether the structure is already present in NPDatabase. Structures which are not yet present in NPDatabase will be written into a csv file suitable for the molconvert pipeline.
 
 __Step 3:__  
-Input: csv file with external source id and SMILES
-Ouput: several text files with external source id's, SMILES and inchi keys 
+Input: csv file with external source id and SMILES  
+Output: several text files with external source id's, SMILES and inchi keys 
 
 Create molconvert inchi keys. First, install the molconvert pipeline, created by Rutger Ozinga: https://github.com/NP-Plug-and-Play-Scripts/inchiKeyCreatorPipeline. You can find the instructions to install the pipeline in InchiKey pipeline manual.pdf.  
 Command to use the pipeline:  
