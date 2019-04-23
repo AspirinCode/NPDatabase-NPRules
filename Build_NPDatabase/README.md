@@ -20,9 +20,9 @@ This script selects unique structures based on the isomeric/ canonical SMILES, g
 __Step 3:__  
 Input: NPDatabase file  
 Input: All molconvert inchi keys  
-Script: add_molconvonvert_inchi_key.py 
+Script: add_molconvonvert_inchi_key.py  
 Output: SQLite file with molconvert inchi keys added to the structure table  
 
-After you have generated the mol convert inchi keys, see  https://github.com/NP-Plug-and-Play-Scripts/inchiKeyCreatorPipeline and step 3 in add new structure data, they can be added to the structure table. 
+After you have generated the mol convert inchi keys, see  https://github.com/NP-Plug-and-Play-Scripts/inchiKeyCreatorPipeline and step 3 in add new structure data (https://github.com/SamStokman/NPDatabase-NPRules), they can be added to the structure table. 
 
 Now NPDatabase can be classified with the ClassyFire Pipeline, see https://github.com/OscarHoekstra/ClassifyNPDB and step 6 in add new structure data.
