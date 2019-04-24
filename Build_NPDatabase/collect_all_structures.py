@@ -9,6 +9,8 @@ database name.
 This script has to be used for each database file you want to add, in order
 to create one large datafile with all database data from several databases.
 
+Output: text file with SMILES, external source id and source name
+
 Use RDkit version 2018.09.2
 
 Usage:
