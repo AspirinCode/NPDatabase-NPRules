@@ -11,7 +11,7 @@ Output: text file with SMILES and external source identifier
 First, all structure data from the different external databases is stored in a file containing the external_source_id and the SMILES. This step has to be repeated for each input file, then all structure data will be collected into one concatenated file.
 
 __Step 2:__   
-Input: concatenated file with all structure data (text file with SMILES and external source identifier)
+Input: concatenated file with all structure data (text file with SMILES and external source identifier)  
 Script: create_NPDatabase.py  
 Output: SQLite file with structure table (with all RDkit attributes), structure_has_data_source table (completed) and data_source table (completed)  
 
