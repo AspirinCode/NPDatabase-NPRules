@@ -12,7 +12,7 @@ Script that checks for structures with missing smiles and double accession numbe
 The external source id's for the MIBiG data were not unique and therefore, the 
 compound name is added to it.
 
-Result a text file with unique source_ids (accession number + compound name) and the 
+Output: text file with unique source_ids (accession number + compound name) and the 
 isomeric/ canononical RDkit smiles.
 
 Use RDkit version 2018.09.2
