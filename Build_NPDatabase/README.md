@@ -4,9 +4,9 @@ _all scripts in Build_NPDatabase directory_
 Note: These scripts were used in order to create NPDatabase. If you want to rebuild NPDatabase, the structure_id’s will change.
 
 __Step 1:__  
-Input: structure data in CLASS format (see CLASS_format_example.txt for the exact file content)
+Input: structure data in CLASS format (see CLASS_format_example.txt for the exact file content)  
 Script: collect_all_structures.py  
-Output: text file with SMILES and external source identifier
+Output: text file with SMILES and external source identifier  
 
 First, all structure data from the different external databases is stored in a file containing the external_source_id and the SMILES. This step has to be repeated for each input file, then all structure data will be collected into one concatenated file.
 
@@ -21,7 +21,7 @@ __Step 3:__
 Input: NPDatabase file  
 Input: All molconvert inchi keys  
 Script: add_molconvonvert_inchi_key.py  
-Output: SQLite file with molconvert inchi keys added to the structure table  
+Output: SQLite file with molconvert inchi keys added to the structure table   
 
 After you have generated the mol convert inchi keys, see  https://github.com/NP-Plug-and-Play-Scripts/inchiKeyCreatorPipeline and step 3 in add new structure data (https://github.com/SamStokman/NPDatabase-NPRules), they can be added to the structure table. 
 
