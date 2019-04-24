@@ -178,7 +178,7 @@ Ouput: NPDatabase SQLite file with new substructures in substructure table and u
 
 If the substructure and structure_has_substructure table do not exist yet (in NPDatabase it already exists!) then you first have to use create_substructure.py. This script creates both tables and generates the data for the given substructure data. Note that this script deletes the substructure table first if it already exist.  
 
-If the substructure and structure_has_substructure table already exist, then use add_substructure.py. This script checks whether the substructures are already present in NPDatabase, if not, then the new substructures are added. Also the structure_has_substructure table will be updated which contains the structure-substructures pair.
+If the substructure and structure_has_substructure table already exist, then use add_substructure.py. This script checks whether the substructures are already present in NPDatabase, if not, then the new substructures are added. Also the structure_has_substructure table will be updated which contains the structure-substructures pairs.
 
 
 
