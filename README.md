@@ -171,17 +171,14 @@ This script is shows the generated substructures in a pop-up display, this scrip
 _All scripts in Add_substructures directory_  
 
 Input: NPDatabase SQLite file  
-Input: text file with structure SMILES and structure id's  (input for molBLOCKS)
-Input: text file with substructure SMILES and structure id's (ouput from molBLOCKS) 
-Script: create_substruture.py and/ or add_substructure.py
-Ouput: NPDatabase SQLite file with new substructures in substructure table and updated structure_has_substructure table.
+Input: text file with structure SMILES and structure id's  (input for molBLOCKS)  
+Input: text file with substructure SMILES and structure id's (ouput from molBLOCKS)   
+Script: create_substruture.py and/ or add_substructure.py  
+Ouput: NPDatabase SQLite file with new substructures in substructure table and updated structure_has_substructure table.  
 
-If the substructure and structure_has_substructure table do not exist yet (in NPDatabase it already exists!) then you first have to use create_substructure.py. This script creates both tables and generates the data for the given substructure data.   
+If the substructure and structure_has_substructure table do not exist yet (in NPDatabase it already exists!) then you first have to use create_substructure.py. This script creates both tables and generates the data for the given substructure data. Note that this script deletes the substructure table first if it already exist.  
 
-If the substructure and structure_has_substructure table already exist, then use add_substructure.py. This script checks whether the substructures are already present in NPDatabase, if not, then the new substructures are added. Also the structure_has_substructure table will be updated which contains the structure-substructures pair. 
-
-
-In NPDatabase, already the substructures of all structures are added, but if you want to add new substructures and update the structure_has_substructure table.
+If the substructure and structure_has_substructure table already exist, then use add_substructure.py. This script checks whether the substructures are already present in NPDatabase, if not, then the new substructures are added. Also the structure_has_substructure table will be updated which contains the structure-substructures pair.
 
 
 
