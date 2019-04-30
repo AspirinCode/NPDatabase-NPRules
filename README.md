@@ -172,7 +172,7 @@ _All scripts in Add_substructures directory_
 
 Input: NPDatabase SQLite file  
 Input: text file with structure SMILES and structure id's  (input for molBLOCKS)  
-Input: text file with substructure SMILES and structure id's (ouput from molBLOCKS)   
+Input: text file with substructure SMILES and structure id's (output from molBLOCKS)   
 Script: create_substruture.py and/ or add_substructure.py  
 Ouput: NPDatabase SQLite file with new substructures in substructure table and updated structure_has_substructure table.  
 
